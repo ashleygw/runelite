@@ -346,11 +346,16 @@ public class MenuEntrySwapperPlugin extends Plugin
 		{
 			return;
 		}
-
+		if(option.equals("attack"))
+		{
+			if (config.swapPickpocket() && target.contains("bandit"))
+			{
+				swap("pickpocket", option, target, true);
+			}
+		}
 		if (option.equals("talk-to"))
 		{
-			if (config.swapPickpocket() && target.contains("h.a.m."))
-			{
+			if (config.swapPickpocket() && target.contains("h.a.m.")) {
 				swap("pickpocket", option, target, true);
 			}
 
